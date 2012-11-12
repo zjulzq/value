@@ -13,7 +13,7 @@ public class AddressDaoImpl extends SimpleDaoImpl<Address> implements AddressDao
 	public Class<Address> bean = Address.class;
 
 	public AddressDaoImpl() {
-		log.info("initialize " + getClass().getSimpleName());
+		log.info("register " + getClass().getSimpleName());
 	}
 
 	@Override
