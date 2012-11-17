@@ -6,4 +6,5 @@ src/main/webapp/WEB-INF/classes/
 target/
 WebContent/
 log4j.log
+*.log
 

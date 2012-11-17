@@ -19,7 +19,7 @@ public class TestDao {
 		System.out.println(address);
 		AddressDao addressDao = (AddressDao) ctx.getBean("addressDaoImpl");
 		List<Address> list = addressDao.getAll();
-		for(Address addr : list){
+		for (Address addr : list) {
 			System.out.println(addr);
 		}
 	}
