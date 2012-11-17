@@ -6,8 +6,14 @@ import java.beans.PropertyDescriptor;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.IdentityHashMap;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
+import java.util.Vector;
+import java.util.WeakHashMap;
 
 import org.apache.log4j.Logger;
 
@@ -30,11 +36,15 @@ public class DomainEquals {
 			return judgeWrap(source, target);
 		}
 
-		if (source instanceof Map<?, ?>) {
+		if (source instanceof String) {
+			return source.equals(target);
+		}
+
+		if (source instanceof Map) {
 			return judgeMap(source, target);
 		}
 
-		if (source instanceof List<?>) {
+		if (source instanceof List) {
 			return judgeList(source, target);
 		}
 
@@ -58,7 +68,11 @@ public class DomainEquals {
 						return false;
 					}
 				} else {
-					return assertEquals(method.invoke(source, new Object[] {}), method.invoke(target, new Object[] {}));
+					boolean flag = assertEquals(method.invoke(source, new Object[] {}),
+							method.invoke(target, new Object[] {}));
+					if (!flag) {
+						return false;
+					}
 				}
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -82,8 +96,25 @@ public class DomainEquals {
 
 	@SuppressWarnings("unchecked")
 	private static boolean judgeMap(Object source, Object target) {
-		Map<Object, Object> sourceMap = (HashMap<Object, Object>) source;
-		Map<Object, Object> targetMap = (HashMap<Object, Object>) target;
+		Map<Object, Object> sourceMap = null;
+		Map<Object, Object> targetMap = null;
+		if (source instanceof HashMap) {
+			sourceMap = (HashMap<Object, Object>) source;
+			targetMap = (HashMap<Object, Object>) target;
+		} else if (source instanceof LinkedHashMap) {
+			sourceMap = (LinkedHashMap<Object, Object>) source;
+			targetMap = (LinkedHashMap<Object, Object>) target;
+		} else if (source instanceof WeakHashMap) {
+			sourceMap = (WeakHashMap<Object, Object>) source;
+			targetMap = (WeakHashMap<Object, Object>) target;
+		} else if (source instanceof TreeMap) {
+			sourceMap = (TreeMap<Object, Object>) source;
+			targetMap = (TreeMap<Object, Object>) target;
+		} else if (source instanceof IdentityHashMap) {
+			sourceMap = (IdentityHashMap<Object, Object>) source;
+			targetMap = (IdentityHashMap<Object, Object>) target;
+		}
+
 		if (sourceMap.size() != targetMap.size()) {
 			return false;
 		}
@@ -101,8 +132,19 @@ public class DomainEquals {
 
 	@SuppressWarnings("unchecked")
 	private static boolean judgeList(Object source, Object target) {
-		List<Object> sourceList = (ArrayList<Object>) source;
-		List<Object> targetList = (ArrayList<Object>) target;
+		List<Object> sourceList = null;
+		List<Object> targetList = null;
+		if (source instanceof ArrayList) {
+			sourceList = (ArrayList<Object>) source;
+			targetList = (ArrayList<Object>) target;
+		} else if (source instanceof LinkedList<?>) {
+			sourceList = (LinkedList<Object>) source;
+			targetList = (LinkedList<Object>) target;
+		} else if (source instanceof Vector<?>) {
+			sourceList = (Vector<Object>) source;
+			targetList = (Vector<Object>) target;
+		}
+
 		if (sourceList.size() != targetList.size()) {
 			return false;
 		}
@@ -128,5 +170,4 @@ public class DomainEquals {
 		}
 		return properties;
 	}
-
 }

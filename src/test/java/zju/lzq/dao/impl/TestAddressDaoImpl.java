@@ -31,7 +31,7 @@ public class TestAddressDaoImpl extends TestCase {
 
 		addressDao.save(address);
 		Address address2 = addressDao.get(address.getId());
-		DomainEquals.assertEquals(address, address2);
+		DomainEquals.assertEquals(address, address2);		
 	}
 
 	@Test
