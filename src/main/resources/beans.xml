@@ -17,8 +17,7 @@
 	<!-- 自动扫描方式加入bean，配置项 -->
 	<context:component-scan base-package="zju.lzq" />
 
-	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
-		destroy-method="close">
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
 		<property name="driverClass" value="com.mysql.jdbc.Driver"></property>
 		<property name="jdbcUrl"
 			value="jdbc:mysql://szzfyftp.gotoftp5.com:3306/szzfyftp?useUnicode=true&amp;characterEncoding=UTF-8"></property>
