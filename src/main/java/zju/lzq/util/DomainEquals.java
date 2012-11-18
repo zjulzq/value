@@ -11,7 +11,9 @@ import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.TreeMap;
+import java.util.TreeSet;
 import java.util.Vector;
 import java.util.WeakHashMap;
 
@@ -19,6 +21,15 @@ import org.apache.log4j.Logger;
 
 public class DomainEquals {
 	private static Logger log = Logger.getLogger(DomainEquals.class);
+	private static Set<Integer> hashCodeSet = new TreeSet<Integer>();
+
+	public static boolean assertEquals(Object source, Object target, boolean clear) {
+		if (clear) {
+			hashCodeSet.clear();
+		}
+
+		return assertEquals(source, target);
+	}
 
 	public static boolean assertEquals(Object source, Object target) {
 
@@ -26,6 +37,10 @@ public class DomainEquals {
 			return true;
 		} else if (source == null || target == null) {
 			return false;
+		}
+
+		if (hashCodeSet.contains(new Integer(source.hashCode()))) {
+			return true;
 		}
 
 		if (!source.getClass().equals(target.getClass())) {
