@@ -5,12 +5,9 @@ import java.util.List;
 import javax.annotation.Resource;
 
 import org.hibernate.SessionFactory;
-import org.springframework.transaction.annotation.Propagation;
-import org.springframework.transaction.annotation.Transactional;
 
 import zju.lzq.dao.SimpleDao;
 
-@Transactional
 public abstract class SimpleDaoImpl<T> implements SimpleDao<T> {
 	@Resource
 	protected SessionFactory sessionFactory;
@@ -37,13 +34,11 @@ public abstract class SimpleDaoImpl<T> implements SimpleDao<T> {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Transactional(propagation = Propagation.NOT_SUPPORTED, readOnly = true)
 	public T get(long id) {
 		return (T) sessionFactory.getCurrentSession().get(getBean(), id);
 	}
 
 	@SuppressWarnings("unchecked")
-	@Transactional(propagation = Propagation.NOT_SUPPORTED, readOnly = true)
 	public List<T> getAll() {
 		String hql = "from " + getBean().getName();
 		return (List<T>) sessionFactory.getCurrentSession().createQuery(hql).list();
