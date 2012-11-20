@@ -2,12 +2,11 @@ package zju.lzq.dao.impl;
 
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
 import zju.lzq.dao.NameDao;
 import zju.lzq.entity.Name;
 
-@Repository @Transactional
+@Repository
 public class NameDaoImpl extends SimpleDaoImpl<Name> implements NameDao {
 	private static Logger log = Logger.getLogger(NameDaoImpl.class);
 	public Class<Name> bean = Name.class;

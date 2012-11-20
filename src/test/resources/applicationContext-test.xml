@@ -32,25 +32,13 @@
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"></property>
-		<property name="mappingResources">
+		
+		<property name="mappingDirectoryLocations">
 			<list>
-				<value>zju/lzq/entity/Address.hbm.xml</value>
-				<value>zju/lzq/entity/AssessColumn.hbm.xml</value>
-				<value>zju/lzq/entity/AssessItem.hbm.xml</value>
-				<value>zju/lzq/entity/AssessTable.hbm.xml</value>
-				<value>zju/lzq/entity/Contact.hbm.xml</value>
-				<value>zju/lzq/entity/Contract.hbm.xml</value>
-				<value>zju/lzq/entity/Department.hbm.xml</value>
-				<value>zju/lzq/entity/Employee.hbm.xml</value>
-				<value>zju/lzq/entity/Name.hbm.xml</value>
-				<value>zju/lzq/entity/Performance.hbm.xml</value>
-				<value>zju/lzq/entity/Position.hbm.xml</value>
-				<value>zju/lzq/entity/Record.hbm.xml</value>
-				<value>zju/lzq/entity/Score.hbm.xml</value>
-				<value>zju/lzq/entity/StaPerf.hbm.xml</value>
-				<value>zju/lzq/entity/User.hbm.xml</value>
+				<value>classpath:/zju/lzq/entity</value>
 			</list>
 		</property>
+		
 		<property name="hibernateProperties">
 			<value>
 				hibernate.dialect=org.hibernate.dialect.MySQLDialect
