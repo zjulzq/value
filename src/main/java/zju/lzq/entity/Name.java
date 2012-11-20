@@ -1,20 +1,21 @@
 package zju.lzq.entity;
 
 import java.io.Serializable;
+import java.util.Date;
 
-public class Name implements Serializable{
-	
+public class Name implements Serializable {
+
 	private static final long serialVersionUID = -2789116562394437778L;
 	private long id;
 	private String firstName;
 	private String familyName;
-	private String prcDate;
+	private Date prcDate;
 
-	public String getPrcDate() {
+	public Date getPrcDate() {
 		return prcDate;
 	}
 
-	public void setPrcDate(String prcDate) {
+	public void setPrcDate(Date prcDate) {
 		this.prcDate = prcDate;
 	}
 
