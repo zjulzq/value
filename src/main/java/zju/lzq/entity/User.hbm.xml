@@ -18,7 +18,7 @@
 		</id>
 		-->
 
-		<property name="userName" column="USER_NAME" length="100"></property>
+		<property name="userName" column="USER_NAME" length="100" unique="true"></property>
 		<many-to-one name="name" column="FK_NAME_ID" cascade="save-update"></many-to-one>
 		<property name="password" column="PASSWORD" length="100"></property>
 		<property name="auth" column="AUTH" precision="10" scale="0"></property>
