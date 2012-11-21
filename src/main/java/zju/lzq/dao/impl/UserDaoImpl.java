@@ -1,6 +1,7 @@
 package zju.lzq.dao.impl;
 
 import org.apache.log4j.Logger;
+import org.hibernate.Query;
 import org.springframework.stereotype.Repository;
 
 import zju.lzq.dao.UserDao;
@@ -18,6 +19,14 @@ public class UserDaoImpl extends SimpleDaoImpl<User> implements UserDao {
 	@Override
 	protected Class<User> getBean() {
 		return bean;
+	}
+
+	@Override
+	public User getUser(String userName) {
+		String hql = "from User where userName = ?";
+		Query query = sessionFactory.getCurrentSession().createQuery(hql);
+		query.setString(0, userName);
+		return (User) query.uniqueResult();
 	}
 
 }
