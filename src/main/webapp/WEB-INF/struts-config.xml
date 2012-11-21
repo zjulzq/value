@@ -7,11 +7,11 @@
 		<form-bean name="loginForm" type="zju.lzq.web.form.LoginForm"></form-bean>
 	</form-beans>
 	<action-mappings>
-		<action path="/login" type="zju.lzq.web.action.LoginAction" name="loginForm">
+		<action path="/login" type="org.springframework.web.struts.DelegatingActionProxy" name="loginForm">
 			<forward name="loginSuccess" path="/WEB-INF/page/main.jsp"></forward>
 			<forward name="loginFailure" path="/login.jsp"></forward>
 		</action>
-		<action path="/address/list" type="zju.lzq.web.action.AddressAction" validate="false">
+		<action path="/address/list" type="org.springframework.web.struts.DelegatingActionProxy" validate="false">
 			<forward name="list" path="/WEB-INF/page/addresslist.jsp" />
 		</action>
 	</action-mappings>
