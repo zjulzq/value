@@ -1,0 +1,19 @@
+.full-screen {
+	width: 100%;
+	height: 100%;
+}
+
+#main-header {
+	width: 100%;
+	height: 10%;
+}
+
+#main-center {
+	width: 100%;
+	height: 80%;
+}
+
+#main-footer {
+	width: 100%;
+	height: 10%;
+}
