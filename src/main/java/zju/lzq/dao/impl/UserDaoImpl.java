@@ -21,7 +21,6 @@ public class UserDaoImpl extends SimpleDaoImpl<User> implements UserDao {
 		return bean;
 	}
 
-	@Override
 	public User getUser(String userName) {
 		String hql = "from User where userName = ?";
 		Query query = sessionFactory.getCurrentSession().createQuery(hql);
