@@ -4,12 +4,12 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
-public class AssessTable implements Serializable{
-	
+public class AssessTable implements Serializable {
+
 	private static final long serialVersionUID = -6946988804431019244L;
 	private long id;
 	private String name;
-	private List<AssessColumn> assessColumns;
+	private List<AssessRow> assessRows;
 	private Date prcDate;
 
 	public long getId() {
@@ -28,12 +28,12 @@ public class AssessTable implements Serializable{
 		this.name = name;
 	}
 
-	public List<AssessColumn> getAssessColumns() {
-		return assessColumns;
+	public List<AssessRow> getAssessRows() {
+		return assessRows;
 	}
 
-	public void setAssessColumns(List<AssessColumn> assessColumns) {
-		this.assessColumns = assessColumns;
+	public void setAssessRows(List<AssessRow> assessRows) {
+		this.assessRows = assessRows;
 	}
 
 	public Date getPrcDate() {

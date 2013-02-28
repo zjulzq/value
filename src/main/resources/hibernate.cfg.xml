@@ -34,7 +34,7 @@
 		<property name="hibernate.c3p0.timeout">5000</property>		
 		  
 		<mapping resource="zju/lzq/entity/Address.hbm.xml" />
-		<mapping resource="zju/lzq/entity/AssessColumn.hbm.xml" />
+		<mapping resource="zju/lzq/entity/AssessRow.hbm.xml" />
 		<mapping resource="zju/lzq/entity/AssessItem.hbm.xml" />
 		<mapping resource="zju/lzq/entity/AssessTable.hbm.xml" />
 		<mapping resource="zju/lzq/entity/Contact.hbm.xml" />

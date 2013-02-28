@@ -21,9 +21,9 @@
 		
 		<property name="name" column="NAME" length="100"></property>
 		
-		<bag name="assessColumns">
+		<bag name="assessRows">
 			<key column="FK_ASSESS_TABLE_ID" />
-			<one-to-many class="AssessColumn"/>			
+			<one-to-many class="AssessRow"/>		
 		</bag>
 		
 		<property name="prcDate" column="PRC_DATE" type="date"></property>

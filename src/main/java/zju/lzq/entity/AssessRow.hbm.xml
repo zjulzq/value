@@ -4,7 +4,7 @@
 	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping package="zju.lzq.entity">
 
-	<class name="AssessColumn" table="ASSESS_COLUMN_TABLE">
+	<class name="AssessRow" table="ASSESS_COLUMN_TABLE">
 		
 		<!-- for mysql -->
 		<id name="id" column="ID">
