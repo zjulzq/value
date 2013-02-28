@@ -4,7 +4,7 @@
 	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping package="zju.lzq.entity">
 
-	<class name="Performance" table="PERFORMANCE_TABLE">
+	<class name="Performance" table="PERFORMANCE">
 		<!-- for mysql -->
 		<id name="id" column="ID">
 			<generator class="increment"/>
@@ -17,7 +17,7 @@
 			</generator>
 		</id>
 		-->
-		<many-to-one name="employee" column="FK_EMP_ID"></many-to-one>
+		<many-to-one name="person" column="FK_PERSON_ID"></many-to-one>
 		<property name="actTime" column="ACT_TIME" type="date"></property>
 		<property name="amount" column="AMOUNT" precision="10" scale="3">
 		</property>

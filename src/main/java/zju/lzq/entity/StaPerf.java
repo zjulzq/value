@@ -3,11 +3,11 @@ package zju.lzq.entity;
 import java.io.Serializable;
 import java.util.Date;
 
-public class StaPerf implements Serializable{
-	
+public class StaPerf implements Serializable {
+
 	private static final long serialVersionUID = -2810734507082889512L;
 	private long id;
-	private Employee employee;
+	private Person person;
 	private int year;
 	private int month;
 	private double amount;
@@ -21,12 +21,12 @@ public class StaPerf implements Serializable{
 		this.id = id;
 	}
 
-	public Employee getEmployee() {
-		return employee;
+	public Person getPerson() {
+		return person;
 	}
 
-	public void setEmployee(Employee employee) {
-		this.employee = employee;
+	public void setPerson(Person person) {
+		this.person = person;
 	}
 
 	public int getYear() {

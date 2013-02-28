@@ -4,7 +4,7 @@
 	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping package="zju.lzq.entity">
 
-	<class name="Employee" table="EMP_TABLE">
+	<class name="Person" table="PERSON">
 		<!-- for mysql -->
 		<id name="id" column="ID">
 			<generator class="increment"/>
@@ -13,7 +13,7 @@
 		<!-- 
 		<id name="id" column="ID">
 			<generator class="native">
-				<param name="sequence">EMP_SEQ</param>
+				<param name="sequence">PERSON_SEQ</param>
 			</generator>
 		</id>
 		-->

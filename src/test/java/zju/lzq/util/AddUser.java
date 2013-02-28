@@ -30,7 +30,7 @@ public class AddUser {
 		name1.setFamilyName("李");
 		name1.setPrcDate(DateUtil.today());
 		User user1 = new User();
-		user1.setName(name1);
+		
 		user1.setPassword(MD5Util.MD5("hoge"));
 		user1.setAuth(User.AUTH_ADMIN);
 		user1.setPrcDate(DateUtil.today());
@@ -41,7 +41,7 @@ public class AddUser {
 		name2.setFamilyName("仲");
 		name2.setPrcDate(DateUtil.today());
 		User user2 = new User();
-		user2.setName(name2);
+		
 		user2.setAuth(User.AUTH_ADMIN);
 		user2.setPassword(MD5Util.MD5("hoge"));
 		user2.setPrcDate(DateUtil.today());

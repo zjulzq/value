@@ -3,11 +3,11 @@ package zju.lzq.entity;
 import java.io.Serializable;
 import java.util.Date;
 
-public class Record implements Serializable{
-	
+public class Record implements Serializable {
+
 	private static final long serialVersionUID = 618404891558826604L;
 	private long id;
-	private Employee employee;
+	private Person person;
 	private Date actTime;
 	private double score;
 	private String memo;
@@ -21,12 +21,12 @@ public class Record implements Serializable{
 		this.id = id;
 	}
 
-	public Employee getEmployee() {
-		return employee;
+	public Person getPerson() {
+		return person;
 	}
 
-	public void setEmployee(Employee employee) {
-		this.employee = employee;
+	public void setPerson(Person person) {
+		this.person = person;
 	}
 
 	public Date getActTime() {

@@ -4,7 +4,7 @@
 	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping package="zju.lzq.entity">
 
-	<class name="Address" table="ADDRESS_TABLE">
+	<class name="Address" table="ADDRESS">
 		<cache usage="read-only"/>
 		<!-- for mysql -->
 		<id name="id" column="ID">

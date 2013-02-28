@@ -4,7 +4,7 @@
 	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping package="zju.lzq.entity">
 
-	<class name="Contact" table="CONTACT_TABLE">
+	<class name="Contact" table="CONTACT">
 		<!-- for mysql -->
 		<id name="id" column="ID">
 			<generator class="increment"/>

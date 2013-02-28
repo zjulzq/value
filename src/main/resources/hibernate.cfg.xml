@@ -40,7 +40,7 @@
 		<mapping resource="zju/lzq/entity/Contact.hbm.xml" />
 		<mapping resource="zju/lzq/entity/Contract.hbm.xml" />
 		<mapping resource="zju/lzq/entity/Department.hbm.xml" />
-		<mapping resource="zju/lzq/entity/Employee.hbm.xml" />
+		<mapping resource="zju/lzq/entity/Person.hbm.xml" />
 		<mapping resource="zju/lzq/entity/Name.hbm.xml" />
 		<mapping resource="zju/lzq/entity/Performance.hbm.xml" />
 		<mapping resource="zju/lzq/entity/Position.hbm.xml" />

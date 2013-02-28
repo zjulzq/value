@@ -3,11 +3,11 @@ package zju.lzq.entity;
 import java.io.Serializable;
 import java.util.Date;
 
-public class Score implements Serializable{
-	
+public class Score implements Serializable {
+
 	private static final long serialVersionUID = 5285686552144015447L;
 	private long id;
-	private Employee employee;
+	private Person person;
 	private AssessTable assessTable;
 	private AssessItem assessItem;
 	private double score;
@@ -21,12 +21,12 @@ public class Score implements Serializable{
 		this.id = id;
 	}
 
-	public Employee getEmployee() {
-		return employee;
+	public Person getPerson() {
+		return person;
 	}
 
-	public void setEmployee(Employee employee) {
-		this.employee = employee;
+	public void setPerson(Person person) {
+		this.person = person;
 	}
 
 	public AssessTable getAssessTable() {
