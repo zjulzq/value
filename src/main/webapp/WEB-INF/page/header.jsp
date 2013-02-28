@@ -2,10 +2,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <div class="row-fluid">
-	<div class="span4">Value System</div>
-	<div class="span2 offset4">
-		<form action="">
-			<input name="logout" type="submit" value="log out" />
-		</form>
+	<div class="span10">Value System</div>
+	<div class="span2">
+		<a href="login.jsp">log out</a>
 	</div>
 </div>
