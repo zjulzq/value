@@ -5,6 +5,7 @@
 <struts-config>
 	<form-beans>
 		<form-bean name="loginForm" type="zju.lzq.web.form.LoginForm"></form-bean>
+		<form-bean name="addDepartmentForm" type="zju.lzq.web.form.AddDepartmentForm"></form-bean>
 	</form-beans>
 	<action-mappings>
 		<action path="/login" type="org.springframework.web.struts.DelegatingActionProxy" name="loginForm">
@@ -13,6 +14,12 @@
 		</action>
 		<action path="/address/list" type="org.springframework.web.struts.DelegatingActionProxy" validate="false">
 			<forward name="list" path="/WEB-INF/page/addresslist.jsp" />
+		</action>
+		<action path="/department" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="department" path="/WEB-INF/page/department.jsp" />
+		</action>
+		<action path="/department/add" type="org.springframework.web.struts.DelegatingActionProxy" name="addDepartmentForm">
+			<forward name="department" path="/WEB-INF/page/department.jsp" />
 		</action>
 	</action-mappings>
 
