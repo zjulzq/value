@@ -98,7 +98,7 @@ public class SimpleTest extends TestCase {
 	public void test6() {
 		String name = "John";
 		myList.add(name);
-		ArgumentCaptor<List> argument = ArgumentCaptor.forClass(List.class);
+		ArgumentCaptor<String> argument = ArgumentCaptor.forClass(String.class);
 		verify(myList).add(argument.capture());
 
 		assertEquals(name, argument.getValue());
