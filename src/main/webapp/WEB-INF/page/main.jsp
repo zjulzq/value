@@ -11,9 +11,9 @@
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
 </head>
-<body class="full-screen">
+<body>
 
-	<div class="navbar navbar-inverse navbar-fixed-top">
+	<div class="navbar navbar-inverse">
 		<div class="navbar-inner">
 			<div class="container-fluid">
 				<a class="brand" href="#">Value System</a>
