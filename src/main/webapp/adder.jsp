@@ -1,23 +1,21 @@
 <%@ taglib uri="http://java.sun.com/jsf/html" prefix="h"%>
 <%@ taglib uri="http://java.sun.com/jsf/core" prefix="f"%>
 <html>
-<head>Add 2 numbers
-</head>
 <body>
-
 	<f:view>
-		<h:form id="addForm">
-
-			<br />First Number:
-		<h:inputText id="firstNumber" value="numberBean.firstNumber" />
-			<br />Second Number:
-		<h:inputText id="secondNumber" value="numberBean.secondNumber" />
-			<br />
-			<h:outputText id="output" value="#{numberBean.result}" />
-			<br />
-			<h:commandButton id="submitButton" value="Add">
-				<f:actionListener type="zju.lzq.learn.MyActionListener" />
-			</h:commandButton>
+		<h:form>
+			<h3>Please enter your name and password.</h3>
+			<table>
+				<tr>
+					<td>Name:</td>
+					<td><h:inputText value="#{user.name}" /></td>
+				</tr>
+				<tr>
+					<td>Password:</td>
+					<td><h:inputSecret value="#{user.password}" /></td>
+				</tr>
+			</table>
+			<h:commandButton value="Login" action="login" />
 		</h:form>
 	</f:view>
 
