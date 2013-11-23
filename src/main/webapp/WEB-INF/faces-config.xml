@@ -2,17 +2,30 @@
 <faces-config xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-faceconfig_1_2.xsd"
 	version="1.2">
+
+	<application>
+		<locale-config>en</locale-config>
+		<supported-local>zh</supported-local>
+	</application>
+
 	<managed-bean>
-		<managed-bean-name>user</managed-bean-name>
-		<managed-bean-class>zju.lzq.learn.UserBean</managed-bean-class>
+		<managed-bean-name>quiz</managed-bean-name>
+		<managed-bean-class>zju.lzq.learn.QuizBean</managed-bean-class>
 		<managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
 
 	<navigation-rule>
-		<from-view-id>/adder.jsp</from-view-id>
+		<from-view-id>/index.jsp</from-view-id>
 		<navigation-case>
-			<from-outcome>login</from-outcome>
-			<to-view-id>/welcome.jsp</to-view-id>
+			<from-outcome>next</from-outcome>
+			<to-view-id>/index.jsp</to-view-id>
 		</navigation-case>
 	</navigation-rule>
+
+	<application>
+		<resource-bundle>
+			<base-name>zju.lzq.learn.messages</base-name>
+			<var>msgs</var>
+		</resource-bundle>
+	</application>
 </faces-config>
