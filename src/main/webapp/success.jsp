@@ -6,6 +6,7 @@
 <title><h:outputText value="#{msgs.title}" /></title>
 	</head>
 	<body>
+	success
 		<h:form>
 			<table>
 				<tr>

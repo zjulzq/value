@@ -10,17 +10,33 @@
 
 	<managed-bean>
 		<managed-bean-name>quiz</managed-bean-name>
-		<managed-bean-class>zju.lzq.learn.QuizBean</managed-bean-class>
+		<managed-bean-class>zju.lzq.learn.Quiz</managed-bean-class>
 		<managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
 
 	<navigation-rule>
-		<from-view-id>/index.jsp</from-view-id>
 		<navigation-case>
-			<from-outcome>next</from-outcome>
+			<from-outcome>success</from-outcome>
+			<to-view-id>/success.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>again</from-outcome>
+			<to-view-id>/again.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>failure</from-outcome>
+			<to-view-id>/failure.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>done</from-outcome>
+			<to-view-id>/done.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>startOver</from-outcome>
 			<to-view-id>/index.jsp</to-view-id>
 		</navigation-case>
 	</navigation-rule>
+
 
 	<application>
 		<resource-bundle>

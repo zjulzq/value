@@ -9,13 +9,15 @@
 		<h:form>
 			<table>
 				<tr>
-					<td><h:outputText value="#{quiz.question}" /></td>
+					<td><h:outputText value="#{msgs.thankYou}" /></td>
 				</tr>
 				<tr>
-					<td><h:inputText value="#{quiz.response}" /></td>
+					<td><h:outputFormat value="#{msgs.score}">
+							<f:param value="#{quiz.score}" />
+						</h:outputFormat></td>
 				</tr>
 				<tr>
-					<td><h:commandButton value="#{msgs.answerButton}" action="#{quiz.answerAction}" /></td>
+					<td><h:commandButton value="#{msgs.startOverButton}" action="#{quiz.startOverAction}" /></td>
 				</tr>
 			</table>
 		</h:form>
