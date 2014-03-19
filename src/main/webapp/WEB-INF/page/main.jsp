@@ -11,11 +11,26 @@
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
 </head>
-<body class="full-screen">
+<body>
 
-	<header>
-		<jsp:include page="header.jsp"></jsp:include>
-	</header>
+	<div class="navbar navbar-inverse">
+		<div class="navbar-inner">
+			<div class="container-fluid">
+				<a class="brand" href="#">Value System</a>
+				<div class="nav-collapse collapse">
+					<ul class="nav">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+					<ul class="nav pull-right">
+						<li><a href="#" class="narbar-link">userName</a></li>
+						<li><a href="login.jsp">log out</a></li>
+					</ul>					
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<div class="container-fluid">
 		<div class="row-fluid">
@@ -26,11 +41,11 @@
 				<jsp:include page="board.jsp"></jsp:include>
 			</div>
 		</div>
+		<hr />
+		<footer>
+			<jsp:include page="footer.jsp"></jsp:include>
+		</footer>
 	</div>
-
-	<footer>
-		<jsp:include page="footer.jsp"></jsp:include>
-	</footer>
 
 </body>
 </html>

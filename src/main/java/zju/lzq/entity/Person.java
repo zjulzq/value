@@ -3,12 +3,12 @@ package zju.lzq.entity;
 import java.io.Serializable;
 import java.util.Date;
 
-public class Employee implements Serializable{
+public class Person implements Serializable{
 	
 	private static final long serialVersionUID = 7829014894177146622L;
 	private long id;
 	private Department department;
-	private String code;
+	private String code;//工号
 	private Position position;
 	private Name name;
 	private Contact contact;

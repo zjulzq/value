@@ -1,4 +1,3 @@
-#.gitignore for assess
 .project
 .classpath
 .settings/
@@ -7,4 +6,4 @@ target/
 WebContent/
 log4j.log
 *.log
-
+/bin

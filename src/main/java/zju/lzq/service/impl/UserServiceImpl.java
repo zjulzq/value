@@ -25,7 +25,6 @@ public class UserServiceImpl implements UserService {
 		log.info("register " + getClass().getSimpleName());
 	}
 
-	@Override
 	@Transactional(propagation = Propagation.NOT_SUPPORTED, readOnly = true)
 	public boolean checkLogin(LoginForm loginForm) {
 		if (loginForm == null || loginForm.getUserName() == null || loginForm.getPassword() == null) {

@@ -1,7 +1,7 @@
 package zju.lzq.dao;
 
-import zju.lzq.entity.AssessColumn;
+import zju.lzq.entity.AssessRow;
 
-public interface AssessColumnDao extends SimpleDao<AssessColumn>{
+public interface AssessColumnDao extends SimpleDao<AssessRow>{
 	
 }

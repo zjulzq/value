@@ -4,7 +4,7 @@
 	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping package="zju.lzq.entity">
 
-	<class name="Department" table="DEPARTMENT_TABLE">
+	<class name="Department" table="DEPARTMENT">
 		<!-- for mysql -->
 		<id name="id" column="ID">
 			<generator class="increment"/>

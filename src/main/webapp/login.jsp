@@ -4,10 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="css/main.css">
 <title>Please Login</title>
 </head>
-<body>
-	<form action="<%=request.getContextPath()%>/login.do">
+<body class="full-screen">
+	<form action="<%=request.getContextPath()%>/login.do" id="loginForm">
 		<table>
 			<tr>
 				<td>User name</td>
@@ -19,7 +20,7 @@
 			</tr>
 			<tr>
 				<td></td>
-				<td><input id="submit" type="submit" value="Log in"></td>
+				<td><input id="submit" type="submit" value="log in"></td>
 			</tr>
 		</table>
 	</form>

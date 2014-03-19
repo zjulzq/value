@@ -34,13 +34,13 @@
 		<property name="hibernate.c3p0.timeout">5000</property>		
 		  
 		<mapping resource="zju/lzq/entity/Address.hbm.xml" />
-		<mapping resource="zju/lzq/entity/AssessColumn.hbm.xml" />
+		<mapping resource="zju/lzq/entity/AssessRow.hbm.xml" />
 		<mapping resource="zju/lzq/entity/AssessItem.hbm.xml" />
 		<mapping resource="zju/lzq/entity/AssessTable.hbm.xml" />
 		<mapping resource="zju/lzq/entity/Contact.hbm.xml" />
 		<mapping resource="zju/lzq/entity/Contract.hbm.xml" />
 		<mapping resource="zju/lzq/entity/Department.hbm.xml" />
-		<mapping resource="zju/lzq/entity/Employee.hbm.xml" />
+		<mapping resource="zju/lzq/entity/Person.hbm.xml" />
 		<mapping resource="zju/lzq/entity/Name.hbm.xml" />
 		<mapping resource="zju/lzq/entity/Performance.hbm.xml" />
 		<mapping resource="zju/lzq/entity/Position.hbm.xml" />

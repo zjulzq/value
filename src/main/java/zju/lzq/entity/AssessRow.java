@@ -3,7 +3,7 @@ package zju.lzq.entity;
 import java.io.Serializable;
 import java.util.Date;
 
-public class AssessColumn implements Serializable{
+public class AssessRow implements Serializable{
 	
 	private static final long serialVersionUID = 8802519477229619130L;
 	private long id;

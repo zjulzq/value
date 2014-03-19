@@ -10,8 +10,8 @@ public class Department implements Serializable{
 	private long id;
 	private String name;
 	private String code;
-	private Employee manager;
-	private Employee viceManager;
+	private Person manager;
+	private Person viceManager;
 	private List<Position> positions;
 	private Date prcDate;
 
@@ -47,19 +47,19 @@ public class Department implements Serializable{
 		this.code = code;
 	}
 
-	public Employee getManager() {
+	public Person getManager() {
 		return manager;
 	}
 
-	public void setManager(Employee manager) {
+	public void setManager(Person manager) {
 		this.manager = manager;
 	}
 
-	public Employee getViceManager() {
+	public Person getViceManager() {
 		return viceManager;
 	}
 
-	public void setViceManager(Employee viceManager) {
+	public void setViceManager(Person viceManager) {
 		this.viceManager = viceManager;
 	}
 

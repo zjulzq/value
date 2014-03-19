@@ -4,7 +4,7 @@
 	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping package="zju.lzq.entity">
 
-	<class name="User" table="USER_TABLE">
+	<class name="User" table="USER">
 		<!-- for mysql -->
 		<id name="id" column="ID">
 			<generator class="increment"/>
@@ -18,9 +18,9 @@
 		</id>
 		-->
 
-		<property name="userName" column="USER_NAME" length="100" unique="true"></property>
-		<many-to-one name="name" column="FK_NAME_ID" cascade="save-update"></many-to-one>
+		<property name="userName" column="USER_NAME" length="100" unique="true"></property>		
 		<property name="password" column="PASSWORD" length="100"></property>
+		<many-to-one name="person" column="FK_PERSON_ID" cascade="save-update"></many-to-one>
 		<property name="auth" column="AUTH" precision="10" scale="0"></property>
 		<property name="prcDate" column="PRC_DATE" type="date"></property>
 	</class>

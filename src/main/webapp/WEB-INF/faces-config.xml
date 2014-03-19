@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-faceconfig_1_2.xsd"
+	version="1.2">
+
+	<application>
+		<locale-config>en</locale-config>
+		<supported-local>zh</supported-local>
+	</application>
+
+	<managed-bean>
+		<managed-bean-name>quiz</managed-bean-name>
+		<managed-bean-class>zju.lzq.learn.Quiz</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+
+	<navigation-rule>
+		<navigation-case>
+			<from-outcome>success</from-outcome>
+			<to-view-id>/success.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>again</from-outcome>
+			<to-view-id>/again.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>failure</from-outcome>
+			<to-view-id>/failure.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>done</from-outcome>
+			<to-view-id>/done.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>startOver</from-outcome>
+			<to-view-id>/index.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+
+	<application>
+		<resource-bundle>
+			<base-name>zju.lzq.learn.messages</base-name>
+			<var>msgs</var>
+		</resource-bundle>
+	</application>
+</faces-config>
